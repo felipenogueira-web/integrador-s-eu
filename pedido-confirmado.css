@@ -1,0 +1,267 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #000000;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 175px;
+    padding: 0 6%;
+
+    background: #000000;
+}
+
+.logo {
+    color: #ffffff;
+
+    font-size: 58px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ff6900;
+}
+
+/* BARRA DE PESQUISA */
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+
+    width: 370px;
+    height: 40px;
+
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.barra-pesquisa input {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+
+    border: none;
+    outline: none;
+
+    font-size: 16px;
+}
+
+.barra-pesquisa button {
+    width: 50px;
+    height: 100%;
+
+    border: none;
+    background: #ffffff;
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* ÍCONES */
+
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    color: #ffffff;
+    background: transparent;
+    border: none;
+
+    font-size: 35px;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.icone:hover {
+    color: #ff6900;
+}
+
+/* MENU */
+
+.menu {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    width: 100%;
+    padding: 20px 6%;
+
+    background: #000000;
+
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+.menu.is-open {
+    display: flex;
+}
+
+.menu a {
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #ff6900;
+}
+
+/* CONFIRMAÇÃO */
+
+.confirmacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: calc(100vh - 175px);
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+/* ÍCONE DE CONFIRMAÇÃO */
+
+.icone-confirmacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 120px;
+    height: 120px;
+
+    border: 12px solid #2dcc5b;
+    border-radius: 50%;
+
+    color: #2dcc5b;
+
+    font-size: 85px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* TEXTOS */
+
+.confirmacao h1 {
+    margin: 25px 0 20px;
+
+    color: #00c853;
+
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.confirmacao p {
+    margin: 0 0 22px;
+
+    font-size: 23px;
+}
+
+/* BOTÃO */
+
+.botao-detalhes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 410px;
+    max-width: 100%;
+    min-height: 52px;
+
+    padding: 12px 20px;
+
+    background: #ff6900;
+    border-radius: 15px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.botao-detalhes:hover {
+    background: #d95500;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        min-height: auto;
+        padding: 25px;
+
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 45px;
+    }
+
+    .barra-pesquisa {
+        order: 3;
+        width: 100%;
+    }
+
+    .icones {
+        gap: 15px;
+    }
+
+    .icone {
+        font-size: 28px;
+    }
+
+    .menu {
+        padding: 20px 25px;
+    }
+
+    .confirmacao {
+        padding-top: 60px;
+    }
+
+    .confirmacao h1 {
+        font-size: 28px;
+    }
+
+    .confirmacao p {
+        font-size: 19px;
+    }
+
+}

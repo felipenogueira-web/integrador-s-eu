@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pagamento e Entrega - AXIS</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pagamento.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho">
+
+        <div class="logo">
+            AX<span>I</span>S
+        </div>
+
+        <form class="barra-pesquisa" id="form-pesquisa">
+
+            <input
+                type="search"
+                placeholder="Pesquisar"
+                aria-label="Pesquisar"
+            >
+
+            <button type="submit">
+                🔎
+            </button>
+
+        </form>
+
+        <div class="icones">
+
+            <span class="icone" title="Minha conta">◉</span>
+
+            <span class="icone" title="Carrinho">🛒</span>
+
+            <span class="icone" title="Menu">☰</span>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTEÚDO DA PÁGINA -->
+
+    
+<main class="pagina">
+
+    <h1>Pagamento e Entrega</h1>
+
+    <div class="layout-pagamento">
+
+        <form class="formulario" id="form-pagamento">
+
+            <section class="grupo">
+
+                <h2>Endereço de Entrega</h2>
+
+                <div class="campos-endereco">
+
+                    <input
+                        class="campo"
+                        type="text"
+                        name="endereco"
+                        placeholder="Rua Boaventura, 67"
+                        required
+                    >
+
+                    <input
+                        class="campo"
+                        type="text"
+                        name="cep"
+                        placeholder="CEP"
+                        inputmode="numeric"
+                        required
+                    >
+
+                </div>
+
+            </section>
+
+
+            <section class="grupo">
+
+                <h2>Método de Pagamento</h2>
+
+                <label class="opcao-pagamento">
+
+                    <input
+                        type="radio"
+                        name="pagamento"
+                        value="pix"
+                        required
+                    >
+
+                    <span class="simbolo-pagamento">❖</span>
+
+                    <span>PIX (Aprovação Imediata)</span>
+
+                </label>
+
+
+                <label class="opcao-pagamento">
+
+                    <input
+                        type="radio"
+                        name="pagamento"
+                        value="cartao"
+                    >
+
+                    <span class="simbolo-pagamento">▰</span>
+
+                    <span>Cartão de Crédito</span>
+
+                </label>
+
+            </section>
+
+        </form>
+
+
+        <section class="seguranca">
+
+            <div class="escudo"></div>
+
+            <h2>Sua compra é segura</h2>
+
+            <button
+                class="finalizar"
+                type="submit"
+                form="form-pagamento"
+            >
+                FINALIZAR PEDIDO
+            </button>
+
+            <p
+                class="mensagem"
+                id="mensagem"
+                hidden
+            ></p>
+
+        </section>
+
+    </div>
+
+</main>
+
+<script src="pagamento.js"></script>
+
+</body>
+
+</html>

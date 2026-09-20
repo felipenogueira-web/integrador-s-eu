@@ -1,0 +1,276 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #111111;
+}
+
+
+/* CONTEÚDO DA PÁGINA */
+
+.pagina {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 25px 3.5%;
+}
+
+.pagina h1 {
+    margin: 0 0 20px;
+    color: #ff6900;
+    font-size: 29px;
+}
+
+
+/* LAYOUT PRINCIPAL */
+
+.layout-pagamento {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+
+/* FORMULÁRIO */
+
+.formulario {
+    width: 100%;
+    padding: 30px 25px;
+    border: 3px solid #999999;
+    border-radius: 15px;
+}
+
+.grupo {
+    margin-bottom: 40px;
+}
+
+.grupo:last-child {
+    margin-bottom: 0;
+}
+
+.grupo h2 {
+    margin: 0 0 12px 5px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+/* ENDEREÇO */
+
+.campos-endereco {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    gap: 20px;
+}
+
+.campo {
+    width: 100%;
+    min-width: 0;
+    height: 52px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 7px;
+    background: #cccccc;
+    font-size: 17px;
+    color: #222222;
+}
+
+.campo:focus {
+    outline: 3px solid #ff6900;
+}
+
+
+/* MÉTODO DE PAGAMENTO */
+
+.opcao-pagamento {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    min-height: 52px;
+    margin-bottom: 20px;
+    padding: 0 16px;
+    background: #cccccc;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    font-size: 17px;
+    color: #666666;
+    cursor: pointer;
+}
+
+.opcao-pagamento input {
+    accent-color: #ff6900;
+}
+
+.opcao-pagamento:has(input:checked) {
+    border-color: #ff6900;
+    background: #eeeeee;
+}
+
+.simbolo-pagamento {
+    font-size: 25px;
+    color: #000000;
+}
+
+
+/* ÁREA DE SEGURANÇA */
+
+.seguranca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-width: 0;
+    text-align: center;
+}
+
+.escudo {
+    position: relative;
+    width: 100px;
+    height: 120px;
+    flex-shrink: 0;
+    background: #00566b;
+
+    clip-path: polygon(
+        50% 0%,
+        100% 20%,
+        100% 58%,
+        85% 80%,
+        50% 100%,
+        15% 80%,
+        0% 58%,
+        0% 20%
+    );
+}
+
+.escudo::after {
+    content: "✓";
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    color: white;
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.seguranca h2 {
+    margin: 0;
+    max-width: 100%;
+    font-size: 28px;
+    color: #000000;
+}
+
+
+/* BOTÃO FINALIZAR */
+
+.finalizar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 550px;
+    min-height: 52px;
+    padding: 12px 20px;
+    background: #ff6900;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.finalizar:hover {
+    background: #d95500;
+}
+
+
+/* MENSAGEM */
+
+.mensagem {
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    font-weight: bold;
+    color: #00566b;
+    line-height: 1.4;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+
+    .layout-pagamento {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 2rem;
+    }
+
+    .seguranca h2 {
+        font-size: 24px;
+    }
+
+    .finalizar {
+        font-size: 18px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .layout-pagamento {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .seguranca {
+        padding: 20px 0;
+    }
+
+    .finalizar {
+        width: 100%;
+        max-width: 550px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .pagina {
+        padding: 20px 15px;
+    }
+
+    .pagina h1 {
+        font-size: 25px;
+    }
+
+    .campos-endereco {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .formulario {
+        padding: 25px 15px;
+    }
+
+    .grupo h2 {
+        font-size: 20px;
+    }
+
+    .opcao-pagamento {
+        font-size: 15px;
+    }
+
+}

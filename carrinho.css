@@ -1,0 +1,392 @@
+
+/* ==========================================================
+   CARRINHO AXIS
+   ========================================================== */
+
+.page--cart {
+    min-height: 100vh;
+}
+
+.cart-main {
+    width: min(100%, 1680px);
+    margin: 0 auto;
+    padding: 3.5rem 3rem 5rem;
+    box-sizing: border-box;
+}
+
+.cart-main > h1 {
+    margin: 0 0 2rem;
+    color: #FF6B00;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 2.35rem;
+    font-weight: 800;
+}
+
+
+/* LAYOUT */
+
+.cart-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 420px;
+    align-items: start;
+    gap: 2rem;
+}
+
+.cart-items {
+    display: grid;
+    gap: 1.4rem;
+}
+
+
+/* PRODUTOS */
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 36px 130px minmax(0, 1fr) 150px 48px;
+    align-items: center;
+    gap: 1rem;
+
+    min-height: 235px;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    border: 3px solid #000000;
+    border-radius: 20px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    cursor: pointer;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cart-item:has(.product-check:checked) {
+    border-color: #FF6B00;
+    box-shadow: 0 0 0 2px rgba(255, 107, 0, 0.15);
+}
+
+
+/* SELEÇÃO */
+
+.cart-item__select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-item__select input {
+    width: 20px;
+    height: 20px;
+    accent-color: #FF6B00;
+    cursor: pointer;
+}
+
+
+/* IMAGENS */
+
+.cart-item__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 130px;
+}
+
+.cart-item__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* NOME E PREÇO */
+
+.cart-item__info h2 {
+    margin: 0;
+    color: #000000;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+.cart-item__price {
+    color: #FF6B00;
+    font-size: 1.4rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+
+/* LIXEIRA */
+
+.cart-item__remove {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+/* RESUMO */
+
+.cart-summary {
+    padding: 2rem;
+    background: #006176;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.cart-summary[hidden] {
+    display: none;
+}
+
+.cart-summary h2 {
+    margin: 0 0 1.8rem;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.summary-line,
+.summary-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.summary-line {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.summary-line strong,
+.summary-total strong {
+    white-space: nowrap;
+}
+
+.summary-free {
+    color: #00D084;
+}
+
+.cart-summary hr {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.summary-total {
+    margin-bottom: 2rem;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+
+/* FINALIZAR PEDIDO */
+
+.cart-summary .button--offer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 62px;
+    padding: 0.8rem 1.8rem;
+    box-sizing: border-box;
+
+    background: #FF6B00;
+    color: #FFFFFF;
+
+    border: 0;
+    border-radius: 15px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cart-summary .button--offer:hover {
+    background: #D95B00;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+   MENU DO CABEÇALHO
+   ========================================================== */
+
+.site-header {
+    position: relative;
+    z-index: 10;
+}
+
+.site-menu {
+    display: none;
+    width: 100%;
+    background: #000000;
+    padding: 0.5rem 0 1.5rem;
+}
+
+.site-menu.is-open {
+    display: block;
+}
+
+.site-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.8rem;
+
+    margin: 0;
+    padding: 0 3rem;
+
+    list-style: none;
+}
+
+.site-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.site-menu a {
+    display: block;
+    padding: 0.5rem 0;
+
+    color: #FFFFFF;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.site-menu a:hover {
+    color: #FF6B00;
+}
+
+
+/* BOTÃO DO MENU */
+
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.menu-toggle img {
+    display: block;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.menu-toggle:hover {
+    background: transparent;
+    transform: none;
+}
+
+
+/* ==========================================================
+   RESPONSIVIDADE
+   ========================================================== */
+
+@media (max-width: 1100px) {
+
+    .cart-layout {
+        grid-template-columns: minmax(0, 1fr) 340px;
+    }
+
+    .cart-item {
+        grid-template-columns: 28px 100px minmax(0, 1fr) 125px 40px;
+        gap: 0.7rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .cart-item__image {
+        height: 100px;
+    }
+
+    .cart-item__price {
+        font-size: 1.15rem;
+    }
+
+}
+
+
+@media (max-width: 720px) {
+
+    .cart-main {
+        padding: 2.5rem 1.15rem 3rem;
+    }
+
+    .cart-main > h1 {
+        font-size: 1.9rem;
+    }
+
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-summary {
+        order: -1;
+    }
+
+    .cart-item {
+        grid-template-columns: 28px 90px minmax(0, 1fr);
+        min-height: 180px;
+    }
+
+    .cart-item__image {
+        height: 90px;
+    }
+
+    .cart-item__price {
+        grid-column: 3;
+        font-size: 1rem;
+    }
+
+    .cart-item__remove {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .cart-item__info h2 {
+        font-size: 0.9rem;
+    }
+
+    .site-menu ul {
+        align-items: center;
+        padding: 0 1.25rem;
+    }
+
+}

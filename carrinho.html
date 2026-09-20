@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Carrinho - AXIS</title>
+
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+
+<body class="page page--cart">
+
+    <!-- CABEÇALHO -->
+
+    <header class="site-header">
+
+        <div class="topbar">
+
+            <a class="brand" href="index.html">
+                <img src="assets/logo.png" alt="AXIS">
+            </a>
+
+            <form class="search-bar" action="#" method="get">
+
+                <label class="sr-only" for="pesquisa">
+                    Pesquisar produtos
+                </label>
+
+                <input
+                    type="search"
+                    id="pesquisa"
+                    name="pesquisa"
+                    placeholder="Pesquisar"
+                >
+
+                <button type="submit" aria-label="Pesquisar">
+                    <img src="assets/lupa.png" alt="">
+                </button>
+
+            </form>
+
+            <div class="header-actions">
+
+                <a
+                    class="header-icon"
+                    href="conta.html"
+                    aria-label="Minha conta"
+                >
+                    <img src="assets/usuario.png" alt="">
+                </a>
+
+                <a
+                    class="header-icon"
+                    href="carrinho.html"
+                    aria-label="Meu carrinho"
+                >
+                    <img src="assets/carrinho.png" alt="">
+                </a>
+
+                <button
+                    class="header-icon menu-toggle"
+                    type="button"
+                    aria-label="Abrir menu"
+                    aria-expanded="false"
+                >
+                    <img src="assets/menu.png" alt="">
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- MENU -->
+
+        <nav class="site-menu" aria-label="Menu principal">
+
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="ajuda.html">Ajuda</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main class="cart-main">
+
+        <h1>Meu Carrinho</h1>
+
+        <div class="cart-layout">
+
+            <!-- PRODUTOS -->
+
+            <section
+                class="cart-items"
+                aria-label="Produtos no carrinho"
+            >
+
+                <article class="cart-item" data-price="249.90">
+
+                    <div class="cart-item__select">
+                        <input
+                            type="radio"
+                            name="produto-selecionado"
+                            class="product-check"
+                            id="produto-jbl"
+                            aria-label="Selecionar fone JBL"
+                        >
+                    </div>
+
+                    <div class="cart-item__image">
+                        <img
+                            src="assets/jbl.png"
+                            alt="Fone de ouvido JBL Tune 530BT"
+                        >
+                    </div>
+
+                    <div class="cart-item__info">
+                        <h2>
+                            Fone de Ouvido JBL Tune 530BT,
+                            On-Ear, Bluetooth, Azul
+                        </h2>
+                    </div>
+
+                    <strong class="cart-item__price">
+                        R$ 249,90
+                    </strong>
+
+                    <button
+                        class="cart-item__remove"
+                        type="button"
+                        aria-label="Remover fone JBL"
+                    >
+                        🗑️
+                    </button>
+
+                </article>
+
+
+                <article class="cart-item" data-price="3599.90">
+
+                    <div class="cart-item__select">
+                        <input
+                            type="radio"
+                            name="produto-selecionado"
+                            class="product-check"
+                            id="produto-lenovo"
+                            aria-label="Selecionar notebook Lenovo"
+                        >
+                    </div>
+
+                    <div class="cart-item__image">
+                        <img
+                            src="assets/notebook.png"
+                            alt="Notebook Lenovo Ideapad 1"
+                        >
+                    </div>
+
+                    <div class="cart-item__info">
+                        <h2>
+                            Notebook Lenovo Ideapad 1
+                            R3-7320u, 4GB, 256GB SSD,
+                            Linux, 15.6"
+                        </h2>
+                    </div>
+
+                    <strong class="cart-item__price">
+                        R$ 3.599,90
+                    </strong>
+
+                    <button
+                        class="cart-item__remove"
+                        type="button"
+                        aria-label="Remover notebook Lenovo"
+                    >
+                        🗑️
+                    </button>
+
+                </article>
+
+
+                <article class="cart-item" data-price="199.90">
+
+                    <div class="cart-item__select">
+                        <input
+                            type="radio"
+                            name="produto-selecionado"
+                            class="product-check"
+                            id="produto-mouse"
+                            aria-label="Selecionar mouse"
+                        >
+                    </div>
+
+                    <div class="cart-item__image">
+                        <img
+                            src="assets/mouse.png"
+                            alt="Mouse sem fio"
+                        >
+                    </div>
+
+                    <div class="cart-item__info">
+                        <h2>
+                            Mouse Sem Fio Logitech,
+                            Ergonômico, Preto
+                        </h2>
+                    </div>
+
+                    <strong class="cart-item__price">
+                        R$ 199,90
+                    </strong>
+
+                    <button
+                        class="cart-item__remove"
+                        type="button"
+                        aria-label="Remover mouse"
+                    >
+                        🗑️
+                    </button>
+
+                </article>
+
+
+                <article class="cart-item" data-price="329.90">
+
+                    <div class="cart-item__select">
+                        <input
+                            type="radio"
+                            name="produto-selecionado"
+                            class="product-check"
+                            id="produto-teclado"
+                            aria-label="Selecionar teclado"
+                        >
+                    </div>
+
+                    <div class="cart-item__image">
+                        <img
+                            src="assets/teclado.png"
+                            alt="Teclado mecânico"
+                        >
+                    </div>
+
+                    <div class="cart-item__info">
+                        <h2>
+                            Teclado Mecânico Gamer,
+                            RGB, ABNT2
+                        </h2>
+                    </div>
+
+                    <strong class="cart-item__price">
+                        R$ 329,90
+                    </strong>
+
+                    <button
+                        class="cart-item__remove"
+                        type="button"
+                        aria-label="Remover teclado"
+                    >
+                        🗑️
+                    </button>
+
+                </article>
+
+            </section>
+
+
+            <!-- RESUMO DA COMPRA -->
+
+            <aside
+                class="cart-summary"
+                id="cart-summary"
+                hidden
+            >
+
+                <h2>Resumo</h2>
+
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <strong id="summary-subtotal">
+                        R$ 0,00
+                    </strong>
+                </div>
+
+                <div class="summary-line">
+                    <span>Frete</span>
+                    <strong class="summary-free">Grátis</strong>
+                </div>
+
+                <hr>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <strong id="summary-total">
+                        R$ 0,00
+                    </strong>
+                </div>
+
+                <a
+                    class="button button--offer button--full"
+                    href="pagamento.html"
+                >
+                    Finalizar pedido
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer class="site-footer">
+        <p>© 2026 AXIS. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <script src="carrinho.js"></script>
+
+</body>
+</html>
